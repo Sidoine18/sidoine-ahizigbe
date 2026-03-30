@@ -1,0 +1,650 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Sidoine Ahizigbe | Entrepreneur Digital & Thechnicien en Froid et climatisation Bénin</title>
+    <meta name="description" content="Portfolio de Sidoine Ahizigbe, étudiant entrepreneur au Bénin. Expert en digital, marketing et génie énergétique(option froid et climatisation).">
+    <meta name="keywords" content="Sidoine Ahizigbe, entrepreneur Bénin, étudiant entrepreneur UNSTIM, UniMarket Bénin, ThermoSim PRO, expert digital Cotonou, génie énergétique Bénin">
+    <meta name="author" content="Sidoine Ahizigbe">
+    <link rel="canonical" href="https://ton-portfolio-lien.com">
+
+    <meta property="og:title" content="Sidoine Ahizigbe | Portfolio Entrepreneur & Digital">
+    <meta property="og:description" content="Découvrez mes projets innovants en digital et énergétique.">
+    <meta property="og:image" content="https://ton-portfolio-lien.com/preview-image.jpg"> <meta property="og:url" content="https://ton-portfolio-lien.com">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sidoine Ahizigbe | Portfolio">
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-bg: #0a0a0c;
+            --accent-color: #7000ff;
+            --secondary-accent: #00d4ff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text-main: #ffffff;
+            --text-dim: #b0b0b0;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* --- Custom Cursor --- */
+        #cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--secondary-accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s;
+        }
+
+        /* --- Background Decoration --- */
+        .blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(112,0,255,0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(50px);
+        }
+
+        /* --- Navbar --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: 0.5s;
+        }
+
+        nav.sticky {
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 15px 10%;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-accent);
+        }
+
+        /* --- Hero Section --- */
+        section {
+            padding: 100px 10%;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+            animation: slideUp 1s ease forwards;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-accent);
+            margin-bottom: 20px;
+            font-weight: 300;
+            animation: slideUp 1.2s ease forwards;
+        }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            animation: slideUp 1.4s ease forwards;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            animation: slideUp 1.6s ease forwards;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--accent-color), var(--secondary-accent));
+            color: white;
+            box-shadow: 0 10px 20px rgba(112, 0, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(112, 0, 255, 0.5);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--glass-border);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--glass-bg);
+            border-color: var(--secondary-accent);
+        }
+
+        /* --- Sections Style --- */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: var(--secondary-accent);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Cards & Glassmorphism --- */
+        .glass-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary-accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        /* --- Compétences --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-card {
+            text-align: center;
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--secondary-accent);
+            margin-bottom: 15px;
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- Portfolio --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1a1a1a, #2c2c2c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(112, 0, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.5s;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        /* --- Statistics --- */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            background: var(--glass-bg);
+            padding: 50px 0;
+            border-radius: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary-accent);
+            display: block;
+        }
+
+        /* --- Contact Form --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info i {
+            color: var(--secondary-accent);
+            margin-right: 15px;
+            width: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 10px;
+            color: white;
+            outline: none;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: var(--secondary-accent);
+        }
+
+        /* --- Float Buttons --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        /* --- Animations --- */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cursor"></div>
+    <div class="blob" style="top: -10%; left: -10%;"></div>
+    <div class="blob" style="bottom: 10%; right: -5%; background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, rgba(0,0,0,0) 70%);"></div>
+
+    <nav id="navbar">
+        <div class="logo">SIDOINE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Bonjour, je suis</h2>
+        <h1>Sidoine Ahizigbe</h1>
+        <p>Étudiant en Génie Énergétique & Entrepreneur Digital. Je fusionne la rigueur de l'ingénierie avec l'innovation du marketing numérique pour propulser vos projets vers de nouveaux sommets.</p>
+        <div class="btn-container">
+            <a href="#portfolio" class="btn btn-primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn-secondary">Me contacter</a>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="glass-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>Passionné par les technologies durables et le monde des affaires, je mène de front un parcours académique exigeant en <strong>Génie Énergétique</strong> et une carrière d'<strong>entrepreneur digital</strong>. Ma vision est de créer des solutions qui allient efficacité énergétique et visibilité numérique pour les entreprises de demain.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-grid">
+            <div class="glass-card skill-card">
+                <i class="fas fa-code"></i>
+                <h3>Tech</h3>
+                <p>Développement Web, Automatisation, IA</p>
+            </div>
+            <div class="glass-card skill-card">
+                <i class="fas fa-palette"></i>
+                <h3>Design</h3>
+                <p>UI/UX Design, Branding, Canva Pro</p>
+            </div>
+            <div class="glass-card skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Marketing</h3>
+                <p>Ads, SEO, Stratégie Digitale</p>
+            </div>
+            <div class="glass-card skill-card">
+                <i class="fas fa-users"></i>
+                <h3>Soft Skills</h3>
+                <p>Leadership, Communication, Gestion</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="reveal">
+        <h2 class="section-title">Mes Services</h2>
+        <div class="services-grid">
+            <div class="glass-card">
+                <i class="fas fa-laptop-code" style="color: var(--secondary-accent); font-size: 2rem; margin-bottom: 20px;"></i>
+                <h3>Création Web</h3>
+                <p>Conception de sites vitrines et portfolios modernes optimisés pour la conversion.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-bullhorn" style="color: var(--secondary-accent); font-size: 2rem; margin-bottom: 20px;"></i>
+                <h3>Stratégie Digitale</h3>
+                <p>Accompagnement des entrepreneurs pour booster leur présence en ligne.</p>
+            </div>
+            <div class="glass-card">
+                <i class="fas fa-bolt" style="color: var(--secondary-accent); font-size: 2rem; margin-bottom: 20px;"></i>
+                <h3>Audit Énergétique</h3>
+                <p>Conseils techniques pour l'optimisation des systèmes énergétiques en entreprise.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" data-target="15">0</span>
+                <p>Projets Réalisés</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>
+                <p>Clients Satisfaits</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="12">0</span>
+                <p>Collaborations</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="reveal">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="project-card glass-card">
+                <div class="project-img"><i class="fas fa-shopping-cart fa-3x"></i></div>
+                <div class="project-overlay">
+                    <h3>UniMarket</h3>
+                    <p>Marketplace pour étudiants béninois. Rôle : Lead Dev & Fondateur.</p>
+                    <a href="#" class="btn btn-secondary" style="padding: 5px 15px; font-size: 0.8rem;">Détails</a>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <div class="project-img"><i class="fas fa-thermometer-half fa-3x"></i></div>
+                <div class="project-overlay">
+                    <h3>ThermoSim PRO</h3>
+                    <p>Logiciel de simulation de cycles frigorifiques. Rôle : Concepteur.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card">
+                <div class="project-img"><i class="fas fa-video fa-3x"></i></div>
+                <div class="project-overlay">
+                    <h3>Sidoine Music Concept</h3>
+                    <p>Production de clip 3D cartoon. Rôle : Directeur Artistique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2 class="section-title">Contactez-moi</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Une idée ? Un projet ?</h3>
+                <p style="margin-bottom: 30px; color: var(--text-dim);">Je suis toujours ouvert à de nouvelles opportunités de collaboration.</p>
+                <p><i class="fas fa-envelope"></i> contact@sidoine.com</p>
+                <p><i class="fab fa-whatsapp"></i> +229 XX XX XX XX</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cotonou, Bénin</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Nom complet" required>
+                <input type="email" placeholder="Votre Email" required>
+                <textarea rows="5" placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn btn-primary" style="border: none; cursor: pointer; width: 100%;">Envoyer le message</button>
+            </form>
+        </div>
+        
+        <div class="social-contact" style="margin-top: 30px; display: flex; gap: 15px;">
+    <a href="#" class="glass-card" style="padding: 10px 15px; text-decoration: none; color: white; font-size: 1.2rem;">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#" class="glass-card" style="padding: 10px 15px; text-decoration: none; color: white; font-size: 1.2rem;">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="#" class="glass-card" style="padding: 10px 15px; text-decoration: none; color: white; font-size: 1.2rem;">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+    </section>
+
+    <footer style="text-align: center; padding: 60px 10%; border-top: 1px solid var(--glass-border); background: rgba(0,0,0,0.2);">
+    <div style="margin-bottom: 30px;">
+        <h2 class="logo" style="margin-bottom: 10px;">SIDOINE</h2>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">Innover aujourd'hui pour l'énergie et le digital de demain.</p>
+    </div>
+
+    <div style="display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; font-size: 1.8rem;">
+        <a href="https://linkedin.com/in/ton-profil" target="_blank" title="LinkedIn" style="color: #0077b5; transition: var(--transition);"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ton-username" target="_blank" title="GitHub" style="color: #ffffff; transition: var(--transition);"><i class="fab fa-github"></i></a>
+        <a href="https://twitter.com/ton-compte" target="_blank" title="X (Twitter)" style="color: #1da1f2; transition: var(--transition);"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://instagram.com/ton-compte" target="_blank" title="Instagram" style="color: #e1306c; transition: var(--transition);"><i class="fab fa-instagram"></i></a>
+        <a href="https://facebook.com/ton-compte" target="_blank" title="Facebook" style="color: #1877f2; transition: var(--transition);"><i class="fab fa-facebook"></i></a>
+        <a href="https://youtube.com/ton-compte" target="_blank" title="YouTube" style="color: #ff0000; transition: var(--transition);"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p style="font-size: 0.8rem; color: var(--text-dim);">Lien direct de mon portfolio :</p>
+        <a href="https://sidoine-portfolio.vercel.app" style="color: var(--secondary-accent); text-decoration: none; font-weight: 600;">sidoine-portfolio.vercel.app</a>
+    </div>
+
+    <p style="font-size: 0.8rem; color: var(--text-dim);">&copy; 2026 Sidoine Ahizigbe. Fait avec passion au Bénin.</p>
+</footer>
+
+    <a href="https://wa.me/2290195498359" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // 1. Custom Cursor
+        const cursor = document.querySelector('#cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // 2. Sticky Navbar & Active Links
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // 3. Reveal on Scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+
+        // 4. Counter Animation
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+
+        const startCount = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Observer pour lancer le compteur quand visible
+        const observer = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) startCount();
+        }, { threshold: 0.5 });
+        
+        observer.observe(document.querySelector('.stats'));
+
+        // 5. Smooth effect on blobs
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.blob');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            blobs.forEach(blob => {
+                blob.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
